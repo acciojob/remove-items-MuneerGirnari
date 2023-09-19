@@ -3,6 +3,9 @@ let element = document.getElementById("colorSelect");
 
 function removeElement() {
 
-    let currentValue = element.value;
-    element.remove(currentValue);
+    let currentValue = element.options[element.selectedIndex];
+
+    if(currentValue){
+        element.removeChild(currentValue);
+    }
 }
